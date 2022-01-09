@@ -38,7 +38,6 @@ internal class SingleAudioPickerBottomSheetDialog : AbstractBottomSheetDialogFra
 
     private val singleAudioAdapter by lazy {
         AudioSingleAdapter(modifier?.viewHolderPlaceholderModifier, modifier?.viewHolderTitleTextModifier) {
-            recycleThubmnail(it.thumbnail)
             setFragmentResult(SingleAudioPicker.SINGLE_AUDIO_REQUEST_KEY, bundleOf(SingleAudioPicker.ON_SINGLE_AUDIO_PICK_KEY to it))
             onAudioPicked?.forAudio(it)
             dismissAllowingStateLoss()
@@ -85,12 +84,7 @@ internal class SingleAudioPickerBottomSheetDialog : AbstractBottomSheetDialogFra
     }
 
     override fun recycleBitmaps() {
-        singleAudioAdapter.currentList.asSequence().forEach {
-            it?.thumbnail?.apply {
-                if (!isRecycled)
-                    recycle()
-            }
-        }
+
     }
 
     private fun recycleThubmnail(thumbnail: Bitmap?) {

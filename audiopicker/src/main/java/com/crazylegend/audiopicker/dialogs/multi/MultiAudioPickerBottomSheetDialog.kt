@@ -96,11 +96,11 @@ internal class MultiAudioPickerBottomSheetDialog : AbstractBottomSheetDialogFrag
     }
 
     override fun recycleBitmaps() {
-        audioMultiSelectAdapter.currentList.asSequence().forEach {
-            it?.thumbnail?.apply {
-                if (!isRecycled)
-                    recycle()
-            }
-        }
+//        audioMultiSelectAdapter.currentList.asSequence().forEach {
+//            it?.thumbnail?.apply {
+//                if (!isRecycled)
+//                    recycle()
+//            }
+//        }
     }
 }
