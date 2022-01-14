@@ -40,26 +40,29 @@
             android:id="@+id/title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:layout_marginStart="8dp"
             android:layout_centerVertical="true"
             android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:padding="10dp"
             android:textSize="18sp" />
     </RelativeLayout>
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/topIndicator"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
         android:layout_centerHorizontal="true"
-        app:srcCompat="@drawable/ic_minus" />
+        app:srcCompat="@drawable/ic_expand_more" />
+
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/gallery"
-        android:layout_below="@id/titleLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@id/topIndicator"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager" />
 
 </RelativeLayout>

@@ -16,7 +16,7 @@
         app:srcCompat="@drawable/ic_unchecked_default"
         tools:ignore="MissingConstraints" />
 
-    <androidx.appcompat.widget.AppCompatImageView
+    <com.crazylegend.core.CircleImageView
         android:id="@+id/image"
         android:layout_width="match_parent"
         android:layout_height="0dp"

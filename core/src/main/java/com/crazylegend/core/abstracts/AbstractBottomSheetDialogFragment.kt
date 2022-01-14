@@ -41,6 +41,17 @@ abstract class AbstractBottomSheetDialogFragment : BottomSheetDialogFragment() {
                                title: MaterialTextView, loadingIndicator: ProgressBar, progressBarTint: Int?,
                                titleModifications: (MaterialTextView) -> Unit) {
         gallery.apply {
+            layoutManager = GridLayoutManager(requireContext(), 1)
+            adapter = singleAdapter
+        }
+        titleModifications(title)
+        progressBarTint?.let { loadingIndicator.indeterminateDrawable.setTint(it) }
+    }
+
+    fun setupUIForVideoSinglePicker(gallery: RecyclerView, singleAdapter: RecyclerView.Adapter<*>,
+                               title: MaterialTextView, loadingIndicator: ProgressBar, progressBarTint: Int?,
+                               titleModifications: (MaterialTextView) -> Unit) {
+        gallery.apply {
             layoutManager = GridLayoutManager(requireContext(), 3)
             adapter = singleAdapter
         }

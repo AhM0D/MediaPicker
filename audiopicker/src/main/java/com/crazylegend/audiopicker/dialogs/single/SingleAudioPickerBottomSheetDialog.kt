@@ -56,6 +56,9 @@ internal class SingleAudioPickerBottomSheetDialog : AbstractBottomSheetDialogFra
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.topIndicator.setOnClickListener {
+            dismiss()
+        }
         askForStoragePermission.launch(Manifest.permission.READ_EXTERNAL_STORAGE)
 
         setupUIForSinglePicker(binding.gallery, singleAudioAdapter, binding.title, binding.loadingIndicator, modifier?.loadingIndicatorTint, ::applyTitleModifications)

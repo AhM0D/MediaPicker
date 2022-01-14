@@ -85,15 +85,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
             setupBaseModifier(
                     loadingIndicatorColor = R.color.minusColor,
-                    titleTextModifications = {
-                        textAlignment = TextView.TEXT_ALIGNMENT_VIEW_START
-                        textStyle = TitleTextModifier.TextStyle.ITALIC
-                        textColor = Color.BLACK
-                        marginBottom = 30 // use dp or sp this is only for demonstration purposes
-                        textPadding = 5 // use dp or sp this is only for demonstration purposes
-                        textSize = 30f  // use sp this is only for demonstration purposes
-                        textString = "Pick an audio"
-                    },
                     placeHolderModifications = {
                         resID = R.drawable.ic_image
                     }
@@ -189,15 +180,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         SingleVideoPicker.showPicker(this, {
             setupBaseModifier(
                     loadingIndicatorColor = R.color.minusColor,
-                    titleTextModifications = {
-                        textAlignment = TextView.TEXT_ALIGNMENT_VIEW_START
-                        textStyle = TitleTextModifier.TextStyle.ITALIC
-                        textColor = Color.BLACK
-                        marginBottom = 30 // use dp or sp this is only for demonstration purposes
-                        textPadding = 5 // use dp or sp this is only for demonstration purposes
-                        textSize = 30f  // use sp this is only for demonstration purposes
-                        textString = "Pick a video"
-                    },
                     placeHolderModifications = {
                         resID = R.drawable.ic_image
                     }
