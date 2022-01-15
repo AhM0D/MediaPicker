@@ -54,7 +54,7 @@
         android:layout_marginTop="4dp"
         android:layout_marginBottom="4dp"
         android:layout_centerHorizontal="true"
-        app:srcCompat="@drawable/ic_expand_more" />
+        app:srcCompat="@drawable/ic_minus" />
 
 
 
