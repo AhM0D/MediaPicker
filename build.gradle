@@ -11,7 +11,7 @@ ext {
 
     //compilation
     compileVersion = 30
-    minVersion = 21
+    minVersion = 16
     verCode = 1
     verName = "1.0.0"
     testRunner = "androidx.test.runner.AndroidJUnitRunner"
